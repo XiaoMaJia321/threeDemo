@@ -1,0 +1,16 @@
+<!--pages/rooms/rooms.wxml-->
+<view class="line">
+  <van-icon name="coupon-o" size="50rpx;" color="red" />
+  <text>使用中</text>
+  <view style="width:80rpx"></view>
+  <van-icon name="coupon-o" size="50rpx;" color="green" />
+  <text>可选</text>
+</view>
+<van-grid column-num="4">
+  <block wx:for="{{site}}">
+    <view style="color:{{item[1]}}">
+      <van-grid-item icon="user-o" text="{{item[0]}}" bindtap="click" id="{{item[0]}}">
+      </van-grid-item>
+    </view>
+  </block>
+</van-grid>

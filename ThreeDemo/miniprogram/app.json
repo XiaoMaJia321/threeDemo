@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/date/date",
+    "pages/index/index",
+    "pages/floor/floor",
+    "pages/rooms/rooms",
+    "pages/me/me"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "3D图书馆",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "公告信息",
+        "iconPath": "./images/info.png",
+        "selectedIconPath": "./images/infob.png"
+      },
+      {
+        "pagePath": "pages/date/date",
+        "text": "座位预约",
+        "iconPath": "./images/site.png",
+        "selectedIconPath": "./images/siteb.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "./images/me.png",
+        "selectedIconPath": "./images/meb.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "usingComponents": {
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index"
+  }
+}

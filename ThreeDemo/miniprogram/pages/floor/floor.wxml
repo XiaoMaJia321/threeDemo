@@ -1,0 +1,26 @@
+<!--pages/floor/floor.wxml-->
+<view class="line">
+  <van-icon name="coupon-o" size="50rpx;" color="red" />
+  <text>人数较为拥挤</text>
+  <view style="width:80rpx"></view>
+  <van-icon name="coupon-o" size="50rpx;" color="green" />
+  <text>人数较为宽松</text>
+</view>
+<van-row gutter="20">
+  <block wx:for="{{rooms}}" wx:key="_id">
+    <navigator url="../rooms/rooms?id={{item._id}}">
+      <van-col span="10">
+        <view class="room">
+          <van-icon name="coupon-o" size="150rpx;" color="{{item.color}}" />
+          <text>{{item.name}}</text>
+        </view>
+      </van-col>
+    </navigator>
+  </block>
+  <van-col span="10">
+    <view class="room">
+      <image src="../../images/eup.png" style="width: 150rpx; height: 150rpx;margin-left:20rpx;"></image>
+      <text>电梯</text>
+    </view>
+  </van-col>
+</van-row>

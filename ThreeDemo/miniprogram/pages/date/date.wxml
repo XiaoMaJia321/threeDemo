@@ -1,0 +1,10 @@
+<!--pages/date/date.wxml-->
+<navigator url="../floor/floor?name=cube3">
+  <canvas type="webgl" id="cube3" style="width: 100%; height: 334rpx;"></canvas>
+</navigator>
+<navigator url="../floor/floor?name=cube2">
+  <canvas type="webgl" id="cube2" style="width: 100%; height: 334rpx;"></canvas>
+</navigator>
+<navigator url="../floor/floor?name=cube1">
+  <canvas type="webgl" id="cube1" style="width: 100%; height: 334rpx;"></canvas>
+</navigator>

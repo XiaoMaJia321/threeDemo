@@ -1,0 +1,18 @@
+<!--pages/me/me.wxml-->
+<view class="info">
+  <image class="img" src="{{user.avatarUrl}}"></image>
+  <text>{{user.nickName}}</text>
+</view>
+<button open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击登录</button>
+
+<van-cell-group>
+
+    <van-field value="{{user.date}}"  center disabled label="我的预约" border="{{ false }}" use-button-slot>
+      <van-button slot="button" size="small" type="primary" bindtap="cancel">取消预约</van-button>
+    </van-field>
+
+</van-cell-group>
+<view style="margin-left:30rpx;font-size:30rpx;">
+  <text>我的记事本：</text>
+  <textarea value="{{user.note}}" type="text" maxlength="-1" bindinput="Input" placeholder="随手记录点什么吧" />
+</view>

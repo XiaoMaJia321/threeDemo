@@ -1,0 +1,70 @@
+room301.get({
+          success: res => {
+            this.setData({
+              siteList1: res.data
+            }, res2 => {
+              room301.skip(20).get().then(res3 => {
+                this.setData({
+                  siteList2: res3.data
+                }, res4 => {
+                  this.setData({
+                    siteList: this.data.siteList1.concat(this.data.siteList2)
+                  })
+                })
+              })
+            })
+          }
+        });
+
+
+<van-row gutter="20">
+  <block wx:for="{{inform}}" wx:key="_id" >
+    <van-col span="10">
+      <view class="room" bindtap="navigator">
+        <van-icon name="coupon-o" size="150rpx;" color="{{item.color}}" />
+        <text>{{item.name}}</text>
+      </view>
+    </van-col>
+  </block>
+</van-row>
+
+switch (options.name) {
+      case "301":
+        room301.get({
+          success: res => {
+            this.setData({
+              siteList1: res.data
+            }, res2 => {
+              room301.skip(20).get().then(res3 => {
+                this.setData({
+                  siteList2: res3.data
+                }, res4 => {
+                  this.setData({
+                    siteList: this.data.siteList1.concat(this.data.siteList2)
+                  })
+                })
+              })
+            })
+          }
+        });  
+        break;
+      case "302":
+        room302.get({
+          success: res => {
+            this.setData({
+              siteList1: res.data
+            }, res2 => {
+              room302.skip(20).get().then(res3 => {
+                this.setData({
+                  siteList2: res3.data
+                }, res4 => {
+                  this.setData({
+                    siteList: this.data.siteList1.concat(this.data.siteList2)
+                  })
+                })
+              })
+            })
+          }
+        });
+        break;
+    }

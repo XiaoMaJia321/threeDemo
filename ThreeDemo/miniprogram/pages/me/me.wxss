@@ -1,0 +1,10 @@
+/* pages/me/me.wxss */
+.img{
+  width: 250rpx;
+  height: 250rpx;
+  border-radius: 250rpx;
+}
+.info{
+  padding: 100rpx 250rpx;
+  text-align: center;
+}
